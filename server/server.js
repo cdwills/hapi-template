@@ -1,7 +1,3 @@
-function strict(){
-  "use strict";
-}
-
 import Hapi from 'hapi';
 import Good from 'good';
 import GoodConsole from 'good-console';

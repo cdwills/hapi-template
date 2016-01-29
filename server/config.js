@@ -1,7 +1,3 @@
-function strict(){
-  "use strict";
-}
-
 require('dotenv').load();
 
 
