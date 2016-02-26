@@ -8,6 +8,7 @@
 
 ### To run in docker:
 `docker-compose build`
+
 `docker-compose up`
 
 ### NOTES: 
