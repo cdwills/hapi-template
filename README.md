@@ -6,6 +6,10 @@
 2. `npm start`
 3. go to [http://localhost:8008](http://localhost:8008) and you should see `Hello!`
 
+### To run in docker:
+`docker-compose build`
+`docker-compose up`
+
 ### NOTES: 
 - until you create your own .env, it'll complain. 
 - you can write all your code in es2015
