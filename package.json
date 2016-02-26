@@ -2,6 +2,7 @@
   "name": "hapi-template",
   "version": "1.0.0",
   "description": "hapi based template with dotenv, babel and testing with lab",
+  "repository": "github:cdwills/hapi-template",
   "main": "start.js",
   "scripts": {
     "start": "node start.js",

@@ -6,7 +6,7 @@ import Hapi from 'hapi';
 import Lab from 'lab';
 import Code from 'code';
 
-import { server } from '../index.js';
+import { server } from '../server/server.js';
 
 // BDD-ify
 const lab = exports.lab = Lab.script();
