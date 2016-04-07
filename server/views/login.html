@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en" class="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Articuwiki</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700italic,700,300' rel='stylesheet' type='text/css'>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <div id="app">
+    <h1 class="header">ArticuWIKI</h1>
+    <div id="query" class="div-table">
+      <div id="querybox" class="div-table-row">
+        <div class="div-table-col col-12 align--center">
+          <h1 class="header"><%= header1 %></h1>
+          <h3 class="subheader"><%= subheader %></h3>
+          <p class="margin--top"><%= message %></p>
+
+          <form method="post" action="/" class="form--align--center">
+            <p><label for 'username'>Username:</label> <input type="text" name="username"></p>
+            <p><label for 'password'>Password:</label> <input type="password" name="password"></p>
+            <p><input type="submit" value="Sign In"></p>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+  </html>
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en" class="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Articuwiki</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700italic,700,300' rel='stylesheet' type='text/css'>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <div id="app">
+    <h1 class="header"><a href="/">ArticuWIKI</a></h1>
+    <div id="query" class="div-table">
+      <div id="querybox" class="div-table-row">
+        <div class="div-table-col col-12 align--center">
+          <form class="floatnone center fullwidth" method="post" action="/whatis">
+            <label for 'text' class="subheader">What is... </label>
+            <input type="text" id="queryText" name="queryText">
+            <input type="submit" id="submit" class="btn--submit" value="?">
+          </form>
+        </div>
+        </div>
+        <div id="submitbox" class="div-table-row">
+          <div class="div-table-col col-12 align--center">
+          <p class="small margin-top align--center">Help us grow this wiki!  <a href="/add">Submit a term</a>.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="table" class="div-table">
+      <div id="row1" class="div-table-row">
+        <div id="col1" class="div-table-col col-2 bold background--grey"><%= header1 %></div>
+        <div id="col2" class="div-table-col col-5 bold background--grey"><%= header2 %></div>
+        <div id="col3" class="div-table-col col-5 bold background--grey">RESOURCES</div>
+      </div>
+
+      <% results_array.forEach(function(result) { %>
+      <div id="db_results_loop" class="div-table-row">
+        <div id="col1" class="div-table-col col-2"><%= unescape(result.term) %></div>
+        <div id="col2" class="div-table-col col-5"><%= unescape(result.definition) %></div>
+        <div id="col3" class="div-table-col col-5">
+          <a href='<%= result.website %>'><%= unescape(result.website) %></a>
+          <br>
+          <%= unescape(result.tutorial) %>
+          <br>
+          <%= unescape(result.info) %>
+        </div>
+      </div>
+      <% });
+      %>
+    </div>
+  </div>
+  <script type="text/javascript">
+
+    // document.getElementById("submit").addEventListener("click", reRoute, false);
+
+    // function reRoute(event){
+    //   if ( event.preventDefault ) event.preventDefault();
+    //   event.returnValue = false;
+    //   var queryText = document.getElementById("queryText").value;
+    //   console.log(queryText);
+    //   window.location.href = "/whatis/"+queryText;
+    // }
+
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en" class="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Articuwiki</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700italic,700,300' rel='stylesheet' type='text/css'>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <div id="app" class="narrowform">
+    <h1 class="header"><a href="/">ArticuWIKI</a> - <%= header1 %></h1>
+
+          <form class="form" method="post" action="/submit">
+
+    <div id="query" class="div-table">
+      <div id="querybox" class="div-table-row">
+       
+            <div class="div-table-col col-3 bold align--right">
+              <label for 'text'><strong>Term:</strong> </label>
+            </div>
+            <div class="div-table-col col-9 align--left">
+              <input type="text" id="termText" name="termText" class="form_field">
+            </div>
+      </div>
+
+          <div  class="div-table-row">
+            <div class="div-table-col col-3 bold align--right">
+              <label for 'definition'><strong>Definition:</strong> </label>
+            </div>
+            <div class="div-table-col col-9 align--left">
+              <textarea id="definition" name="definition" class="form_field"></textarea>
+            </div>
+          </div>
+
+          <div  class="div-table-row">
+            <div class="div-table-col col-3 bold align--right">
+              <label for 'tags'><strong>Tags:</strong> </label>
+            </div>
+            <div class="div-table-col col-9 align--left">
+              <input type="text" id="tags" name="tags" class="form_field">
+            </div>
+          </div>
+
+          <div  class="div-table-row">
+            <div class="div-table-col col-3 bold align--right">
+              <label for 'website'><strong>Website:</strong></label>
+            </div>
+             <div class="div-table-col col-9 align--left"> 
+              <input type="text" id="website" name="website" class="form_field">
+            </div>
+          </div>
+
+          <div  class="div-table-row">
+            <div class="div-table-col col-3 bold align--right">
+              <label for 'tutorial'><strong>Tutorial:</strong></label>
+            </div>
+             <div class="div-table-col col-9 align--left"> 
+              <input type="text" id="tutorial" name="tutorial" class="form_field">
+            </div>
+          </div>
+
+          <div  class="div-table-row">
+            <div class="div-table-col col-3 bold align--right">
+              <label for 'info'><strong>Additional Info:</strong></label>
+            </div>
+             <div class="div-table-col col-9 align--left"> 
+              <input type="text" id="info" name="info" class="form_field">
+            </div>
+          </div>
+
+          <div  class="div-table-row">
+            <div class="div-table-col col-12 align--center">
+            <input type="submit" id="submit" class="btn--submit--term" value="Submit">
+            </div>
+          </div>
+          
+        
+      </div>
+      </form>
+    </div>
+
+</body>
+</html>
+

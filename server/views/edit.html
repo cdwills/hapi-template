@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en" class="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Articuwiki</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700italic,700,300' rel='stylesheet' type='text/css'>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <div id="app">
+    <h1 class="header"><a href="/">ArticuWIKI</a></h1>
+    <div id="query" class="div-table">
+      <div id="querybox" class="div-table-row">
+        <div class="div-table-col col-12 align--center">
+          <form action="/pending" method="post"><input type="hidden" name="action" value="approveall"><input type="submit" id="approveall" value="Approve All" class="btn--light"></form> <form action="/pending" method="post"><input type="hidden" name="action" value="deleteall"><input type="submit" id="deleteall" value="Delete All" class="btn--light"></form>
+        </div>
+      </div>
+    </div>
+
+    <div id="table" class="div-table">
+      <div id="row1" class="div-table-row">
+        <div id="r1-col1" class="div-table-col col-2 bold background--grey align--left"><%= header1 %></div>
+        <div id="r1-col2" class="div-table-col col-4 bold background--grey align--left"><%= header2 %></div>
+        <div id="r1-col3" class="div-table-col col-6 bold background--grey align--left">RESOURCES</div>
+      </div>
+
+      <% results_array.forEach(function(result) { %>
+
+
+      <div id="db_results_loop" class="div-table-row">
+
+        <div class="div-table-col col-2">
+          <form method="post" action="/edit" >
+            <input type="hidden" name="action" value="selective">
+            <input type="hidden" name="id" value="<%= result.id %>">
+            <p><input type="text" value="<%= unescape(result.term) %>" name="term" class="padded fullwidth"></p>
+
+            <p class="small"><input type="radio" value="pending" name="status" <% if(result.status=='pending'){ %> checked <% } %>>Pending </p><p class="small"><input type="radio" name="status" value="live" <% if(result.status=='live'){ %> checked <% } %>>Live </p><p class="small"><input type="radio" name="status" value="delete">Delete
+          </p>
+          <p class="small">Last Updated: <%= result.last_updated %></p>
+
+        </div>
+        <div class="div-table-col col-4"><textarea name="definition" rows="5" cols="40" class="padded fullwidth"><%= unescape(result.definition) %></textarea></div>
+        <div class="div-table-col col-6">
+          <p>
+            Website:<br>
+            <input type="text" value="<%= unescape(result.website) %>" name="website" class="padded fullwidth">
+          </p><p>
+          Tutorial:<br>
+          <input type="text" value="<%= unescape(result.tutorial) %>" name="tutorial" class="padded fullwidth">
+        </p>
+        <p>
+          Additional Information:
+          <p>
+            <textarea name="info" rows="5" cols="40" class="padded fullwidth"><%= unescape(result.info) %></textarea></p>
+
+            <p>Tags:</p>
+            <p>
+              <textarea name="tags" rows="5" cols="40" class="padded fullwidth"><%= unescape(result.tags) %></textarea></p>
+
+              <p class="margin--top">
+                <input type="submit" name="save" value="Save" class="btn--light">
+              </p>
+
+            </div>
+          </form></div>
+
+          <hr class="clearfloat">
+          <% });
+          %>
+
+
+        </div>
+      </body>
+      </html>
+
