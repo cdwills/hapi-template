@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en" class="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Articuwiki</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700italic,700,300' rel='stylesheet' type='text/css'>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+<div id="app">
+  <h1 class="header">ArticuWIKI</h1>
+  <div id="query" class="div-table">
+    <div id="querybox" class="div-table-row">
+      <div class="div-table-col col-12 align--center">
+        <p>Thank you for adding the following term definition:</p>
+        <p><strong>Term:</strong> <%= db_data[0] %></p>
+        <p><strong>Definition:</strong><br>
+          <%= db_data[1] %>
+        </p>
+        <p><strong>Tags:</strong><br>
+          <%= db_data[2] %>
+        </p>
+        <p><strong>Website:</strong> <%= db_data[3] %></p>
+        <p><strong>Tutorial:</strong> <%= db_data[4] %></p>
+        <p><strong>Additional Information:</strong><br>
+          <%= db_data[5] %>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

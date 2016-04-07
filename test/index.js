@@ -8,6 +8,8 @@ import Code from 'code';
 
 import { server } from '../server/server.js';
 
+
+
 // BDD-ify
 const lab = exports.lab = Lab.script();
 const describe = lab.describe;
@@ -25,7 +27,7 @@ describe('routes', () => {
 
     server.inject(request, (response) => {
       expect(response.statusCode).to.equal(200);
-      expect(response.result).to.equal("Hello!");
+      expect(response.result).to.equal("Home");
       done();
     });
   });

@@ -5,7 +5,7 @@
   "repository": "github:cdwills/hapi-template",
   "main": "start.js",
   "scripts": {
-    "start": "node start.js",
+    "start": " node start.js",
     "dev": "nodemon -q -x npm start",
     "test": "lab -T node_modules/lab-babel -t 100",
     "test-cov-html": "lab -T node_modules/lab-babel -r html -o coverage.html"
@@ -15,16 +15,27 @@
       "es2015"
     ]
   },
-  "author": "cdwills",
+  "author": "cdwills and sumlah",
   "license": "ISC",
   "dependencies": {
     "babel-polyfill": "^6.5.0",
     "babel-preset-es2015": "^6.5.0",
     "babel-register": "^6.5.2",
+    "cool-ascii-faces": "1.3.3",
     "dotenv": "^2.0.0",
+    "ejs": "2.3.3",
+    "express": "4.13.3",
+    "forever": "0.15.1 ",
     "good": "^6.6.0",
     "good-console": "^5.3.1",
-    "hapi": "^13.0.0"
+    "hapi": "^13.0.0",
+    "inert": "3.2.0",
+    "mysql": "^2.5.4",
+    "newrelic": "^1.26.0",
+    "path": "0.12.7",
+    "pg": "4.x",
+    "react": "0.14.8",
+    "react-dom": "0.14.8"
   },
   "devDependencies": {
     "code": "^2.1.0",
